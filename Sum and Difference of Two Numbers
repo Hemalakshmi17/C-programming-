@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int a, b;       // integers
+    float x, y;     // floating-point numbers
+
+    // Input
+    scanf("%d %d", &a, &b);   // read two integers
+    scanf("%f %f", &x, &y);   // read two floats
+
+    // Output
+    printf("%d %d\n", a + b, a - b);   // sum and difference of integers
+    printf("%.1f %.1f\n", x + y, x - y); // sum and difference of floats (1 decimal place)
+
+    return 0;
+}
