@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    char ch;             // single character
+    char str[50];        // string (word, no spaces)
+    char sen[100];       // sentence (can include spaces)
+
+    // Input
+    scanf("%c", &ch);          // read single character
+    scanf("%s", str);          // read string (stops at space/newline)
+    getchar();                 // clear newline left in buffer
+    fgets(sen, sizeof(sen), stdin);  // read full sentence including spaces
+
+    // Output
+    printf("%c\n", ch);
+    printf("%s\n", str);
+    printf("%s", sen); // fgets keeps '\n' at end, no need to add
+
+    return 0;
+}
