@@ -1,0 +1,6 @@
+#include <stdio.h>  // Header file for input-output functions
+
+int main() {
+    printf("Hello, World!\n"); // Prints Hello, World! to the screen
+    return 0; // Exit status of the program
+}
