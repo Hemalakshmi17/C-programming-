@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+// function declaration
+int add(int a, int b);
+void swap(int *x, int *y);
+
+int main() {
+    int a, b, choice;
+
+    // Input
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    // Conditional statement menu
+    printf("\nChoose an option:\n");
+    printf("1. Add\n");
+    printf("2. Subtract\n");
+    printf("3. Swap using pointers\n");
+    printf("Enter choice: ");
+    scanf("%d", &choice);
+
+    // Decision making (conditional statements)
+    if (choice == 1) {
+        printf("Sum = %d\n", add(a, b));     // function call
+    } 
+    else if (choice == 2) {
+        printf("Difference = %d\n", a - b);
+    } 
+    else if (choice == 3) {
+        swap(&a, &b);   // pointer function call
+        printf("After swapping: a = %d, b = %d\n", a, b);
+    } 
+    else {
+        printf("Invalid choice!\n");
+    }
+
+    return 0;
+}
+
+// function definition
+int add(int a, int b) {
+    return a + b;
+}
+
+// function with pointers
+void swap(int *x, int *y) {
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
