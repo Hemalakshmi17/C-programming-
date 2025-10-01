@@ -1,0 +1,76 @@
+#include <stdio.h>
+
+// function declaration
+int add(int a, int b);
+void swap(int *x, int *y);
+
+int main() {
+    int a, b, choice;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    // Menu using conditional statements
+    printf("\nChoose an option:\n");
+    printf("1. Add\n");
+    printf("2. Subtract\n");
+    printf("3. Swap using pointers\n");
+    printf("4. Print numbers 1 to 5 using for loop\n");
+    printf("5. Print numbers 1 to 5 using while loop\n");
+    printf("6. Print numbers 1 to 5 using do-while loop\n");
+    printf("Enter choice: ");
+    scanf("%d", &choice);
+
+    if (choice == 1) {
+        printf("Sum = %d\n", add(a, b));
+    } 
+    else if (choice == 2) {
+        printf("Difference = %d\n", a - b);
+    } 
+    else if (choice == 3) {
+        swap(&a, &b);
+        printf("After swapping: a = %d, b = %d\n", a, b);
+    } 
+    else if (choice == 4) {
+        printf("For Loop: ");
+        for (int i = 1; i <= 5; i++) {
+            printf("%d ", i);
+        }
+        printf("\n");
+    } 
+    else if (choice == 5) {
+        printf("While Loop: ");
+        int i = 1;
+        while (i <= 5) {
+            printf("%d ", i);
+            i++;
+        }
+        printf("\n");
+    } 
+    else if (choice == 6) {
+        printf("Do-While Loop: ");
+        int i = 1;
+        do {
+            printf("%d ", i);
+            i++;
+        } while (i <= 5);
+        printf("\n");
+    } 
+    else {
+        printf("Invalid choice!\n");
+    }
+
+    return 0;
+}
+
+// function definition
+int add(int a, int b) {
+    return a + b;
+}
+
+// function with pointers
+void swap(int *x, int *y) {
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
